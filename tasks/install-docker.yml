@@ -1,0 +1,17 @@
+---
+
+- name: Install package ancible from repo
+  package:
+    name: docker
+    state: present
+  become: yes
+  notify:
+    - Enable Docker
+    - Restart Docker
+
+- name: Add the current user to the docker group
+  user:
+    name: "{{ ansible_user }}"
+    groups: "docker"
+    append: yes
+  become: yes

@@ -1,0 +1,4 @@
+---
+
+- include: "install-{{ item }}.yml"
+  loop: "{{ docker_tools }}"

@@ -1,2 +1,5 @@
 ---
-# vars file for docker
+docker_tools:
+  - docker
+  - compose
+  - dcsg
